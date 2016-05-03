@@ -1,0 +1,139 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University Assignment Title Page 
+% LaTeX Template
+% Version 1.0 (27/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% WikiBooks (http://en.wikibooks.org/wiki/LaTeX/Title_Creation)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+% Instructions for using this template:
+% This title page is capable of being compiled as is. This is not useful for 
+% including it in another document. To do this, you have two options: 
+%
+% 1) Copy/paste everything between \begin{document} and \end{document} 
+% starting at \begin{titlepage} and paste this into another LaTeX file where you 
+% want your title page.
+% OR
+% 2) Remove everything outside the \begin{titlepage} and \end{titlepage} and 
+% move this file to the same directory as the LaTeX file you wish to add it to. 
+% Then add \input{./title_page_1.tex} to your LaTeX file where you want your
+% title page.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+% PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage[margin=1.0in] {geometry}
+\usepackage[none] {hyphenat}
+\setlength{\parindent}{10ex}
+\newcommand*{\SignatureAndDate}[1]{%
+    \par\noindent\makebox[2.5in]{\hrulefill} \hfill\makebox[2.0in]{\hrulefill}%
+    \par\noindent\makebox[2.5in][l]{#1}      \hfill\makebox[2.0in][l]{Date}%
+}%
+
+\begin{document}
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+% HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE University Of Tennessee\\ Knoxville}\\[1.5cm] % Name of your university/college
+\textsc{\Large Art Of Hiking Application}\\[0.5cm] % Major heading such as course name
+%\textsc{\large Team \#13}\\[0.5cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Description of Tables}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+% AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Authors:}\\
+Gabriel \textsc{Hanas}\\
+Chris \textsc{Tester}\\
+Robert \textsc{Moncrief}\\
+Trevor \textsc{Jones}\\
+Anthony \textsc{Stewart}\\
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Customer:} \\
+Bradley \textsc{Vander Zanden} % Supervisor's Name
+\end{flushright}
+\end{minipage}\\[4cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+% DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large \today}\\[3cm] % Date, change the \today to a set date if you want to be precise
+
+%----------------------------------------------------------------------------------------
+% LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+%\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
+ 
+%----------------------------------------------------------------------------------------
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+\tableofcontents
+
+
+\newpage
+\section{db\_connect}
+\textbf{Usage:} no arguments \\
+\textbf{Description:} a function that connects to the pre-defined database using the PHP PDO object. If the connection is successful, the connection is returned; otherwise, a boolean value of false is returned. In these cases the rest of the function/program calling db\_connect should stop execution.\\
+
+\newpage
+\section{isInDatabase}
+\textbf{Usage:} sql, expected, id \\
+sql - A query string that should be checking if some row already exists 
+in the database. The query will be executed and the result and row count
+compared. If the query fails for some reason, an error message will return
+that it failed and the query string it attempted to execute. \\
+
+expected - The number of rows expected to be returned by the query. Typically
+either 0 or 1. \\
+
+id - A value to be returned by the query. If this value is not passed
+in as null, then in the SELECT statement the id must also be present. \\
+
+\textbf{Description:} a function that checks if a certain row is in a table.
+If id is passed in as null, then the return value will either be an error string, or it will be "Successful!". If id is not null, then the value in 
+the SELECT statement will be returned. \\
+\textbf{Description:}
+\end{document}

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Art of Hiking</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="google_app_id">60297311173</string>
+</resources>

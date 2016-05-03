@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/mainLayout"
+    tools:context="com.taoh.draft.artofhiking.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:id="@+id/mapPane">
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/mapFragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:id="@+id/buttonPane">
+        <ImageButton
+            android:id="@+id/imageButtonMap"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/map"/>
+
+        <ImageButton
+            android:id="@+id/imageButtonList"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/list_view"
+            android:scaleType="fitXY"
+            android:onClick="goToList"/>
+
+        <ImageButton
+            android:id="@+id/imageButtonSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/search"
+            android:scaleType="fitXY"
+            android:layout_weight="1"
+            android:onClick="goToSearch"/>
+
+        <ImageButton
+            android:id="@+id/imageButtonUser"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/user"
+            android:scaleType="fitXY"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>
